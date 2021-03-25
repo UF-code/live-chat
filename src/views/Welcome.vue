@@ -2,14 +2,16 @@
   <div class="welcome container">
     <p>Welcome</p>
     <SignupForm />
+    <LoginForm />
   </div>
 </template>
 
 <script>
 import SignupForm from '../components/SignupForm'
+import LoginForm from '../components/LoginForm'
 
 export default {
-  components: { SignupForm },
+  components: { SignupForm, LoginForm },
 }
 </script>
 
