@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <nav v-if="user">
     <div>
-      <p>Hey there... display name here</p>
-      <p class="email">Currently logged in as... email</p>
+      <p>Hey there {{ user.displayName }}</p>
+      <p class="email">Currently logged in as {{ user.displayName }}</p>
     </div>
     <button @click="handleClick">Logout</button>
   </nav>
@@ -24,7 +24,7 @@ export default {
       }
     }
 
-    return { handleClick }
+    return { handleClick, user }
   },
 }
 </script>
