@@ -10,9 +10,12 @@
 
 <script>
 import useLogout from '../composables/useLogout'
+import getUser from '../composables/getUser'
+
 export default {
   setup() {
     const { logout, error } = useLogout()
+    const { user } = getUser()
 
     const handleClick = async () => {
       await logout()
