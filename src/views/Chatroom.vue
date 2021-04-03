@@ -9,11 +9,12 @@
 import { watch } from 'vue'
 import { useRouter } from 'vue-router'
 import NewChatForm from '../components/NewChatForm'
+import ChatWindow from '../components/ChatWindow'
 import Navbar from '../components/Navbar'
 import getUser from '../composables/getUser'
 
 export default {
-  components: { Navbar, NewChatForm },
+  components: { Navbar, NewChatForm, ChatWindow },
   setup() {
     const { user } = getUser()
     const router = useRouter()
